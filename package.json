@@ -1,0 +1,38 @@
+{
+  "name": "elbow-room",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "workspaces": [
+    "apps/web"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "python3 -m apps.backend.elbow_room.server",
+    "dev:web": "npm run dev --workspace @elbow-room/web",
+    "build": "npm run build --workspace @elbow-room/web",
+    "test": "python3 -m unittest discover -s apps/backend/tests -v",
+    "test:e2e": "playwright test",
+    "test:video": ".venv/bin/python -m unittest discover -s apps/backend/tests -p test_video.py -v",
+    "model:download": "python3 -m apps.backend.elbow_room.model",
+    "test:e2e:video": ".venv/bin/python scripts/prepare-video-e2e.py && playwright test --config playwright.video.config.ts",
+    "test:verification": ".venv/bin/python -m unittest discover -s apps/backend/tests -p test_verification.py -v",
+    "verifier:start": "python3 scripts/run-verifier.py",
+    "verifier:setup": "python3 scripts/setup-local-services.py --verifier",
+    "test:rtsp": ".venv/bin/python -m unittest discover -s apps/backend/tests -p test_rtsp.py -v",
+    "test:backend": ".venv/bin/python -m unittest discover -s apps/backend/tests -v",
+    "test:e2e:verification": "playwright test --config playwright.verification.config.ts",
+    "demo": ".venv/bin/python scripts/run-demo.py",
+    "evaluate": ".venv/bin/python -m apps.backend.elbow_room.evaluation",
+    "evaluation:smoke:prepare": ".venv/bin/python scripts/prepare-evaluation-smoke.py",
+    "test:e2e:demo": "npm run evaluation:smoke:prepare && playwright test --config playwright.demo.config.ts",
+    "demo:images": ".venv/bin/python scripts/run-demo.py --config data/user-train-images/config.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,3 @@
+# CPU-only local inference. Python 3.12+; versions verified on Python 3.14.
+numpy==2.5.3
+opencv-python-headless==4.13.0.92

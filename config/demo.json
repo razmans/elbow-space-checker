@@ -1,0 +1,22 @@
+{
+  "train_name": "Elbow Room Express",
+  "platform_name": "Demo platform · Platform 1",
+  "direction": "right",
+  "coaches": [
+    {
+      "coach_id": "coach-01", "coach_name": "Coach 01", "position": 1,
+      "platform_zone": "Zone A", "source": "simulation", "capacity": 100,
+      "interval_seconds": 60, "counts": [24, 18, 27, 12, 0]
+    },
+    {
+      "coach_id": "coach-02", "coach_name": "Coach 02", "position": 2,
+      "platform_zone": "Zone B", "source": "simulation", "capacity": 120,
+      "interval_seconds": 60, "counts": [72, 84, 60, 48, 90]
+    },
+    {
+      "coach_id": "coach-03", "coach_name": "Coach 03", "position": 3,
+      "platform_zone": "Zone C", "source": "simulation", "capacity": 80,
+      "interval_seconds": 60, "counts": [72, 76, 68, 80, 70]
+    }
+  ]
+}

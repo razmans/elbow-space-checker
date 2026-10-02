@@ -1,0 +1,34 @@
+import { test, expect } from '@playwright/test';
+
+test('actual local video inference reaches dashboard, persists and ends as unknown', async ({ page, request }) => {
+  let navigations = 0;
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('framenavigated', frame => { if (frame === page.mainFrame()) navigations++; });
+  await page.goto('/');
+  const video = page.getByTestId('coach-coach-01');
+  await expect(video.getByText('Recorded video', { exact: true })).toBeVisible();
+  await expect(video.getByTestId('occupancy')).toHaveText(/\d+%/, { timeout: 10000 });
+  await expect(video).toContainText('2× replay');
+  await expect(video).toContainText('Sample at');
+  await expect(page.getByTestId('coach-coach-02')).toContainText('Simulated data');
+  await expect(page.getByTestId('layout-coach-01')).toContainText('Recorded video');
+  const initial = await video.getAttribute('data-observation-id');
+  await expect(video).not.toHaveAttribute('data-observation-id', initial!, { timeout: 5000 });
+  const history = await (await request.get('/api/observations')).json();
+  const observations = history.filter((row: { source: string }) => row.source === 'recorded_video');
+  expect(observations.length).toBeGreaterThan(1);
+  expect(observations[0].detector).toBe('mobilenet-ssd-voc');
+  expect(observations[0].sample_counts).toHaveLength(3);
+  expect(observations[0].media_position_seconds).toBeGreaterThan(observations[1].media_position_seconds);
+  await page.screenshot({ path: 'test-results/video-desktop.png', fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  await page.screenshot({ path: 'test-results/video-mobile.png', fullPage: true });
+  await expect(video).toContainText('Replay finished', { timeout: 18000 });
+  await expect(video).toHaveAttribute('data-status', 'unknown');
+  await expect(video.getByTestId('occupancy')).toHaveText('—');
+  await expect(page.getByTestId('coach-coach-02')).toHaveAttribute('data-status', 'yellow');
+  expect(navigations).toBe(1);
+  expect(errors).toEqual([]);
+});

@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-02T09:02:04.314546+00:00",
+  "dataset_name": "Known-empty synthetic pipeline smoke",
+  "scope": "nonrepresentative_smoke",
+  "provenance": "Locally generated solid grey frames. No real people, train footage, or independent scenes.",
+  "annotator": "Synthetic fixture: count zero by construction; not human-labelled passenger footage",
+  "labelled_at": "2026-10-02T09:01:22.482980+00:00",
+  "manifest_sha256": "61cd696161a6bf32acd9e87a3af533c3f05055efb015aaff9eff05a5dfc7e34c",
+  "runtime": {
+    "platform": "Linux-7.2.5-3-omarchy-x86_64-with-glibc2.44",
+    "python": "3.14.7",
+    "detector": "mobilenet-ssd-voc",
+    "confidence": 0.5,
+    "initialization_seconds": 0.12754041599964694,
+    "verifier_model": "elbow-verifier"
+  },
+  "attempted_windows": 3,
+  "failed_windows": 0,
+  "verification_unavailable_windows": 0,
+  "metrics": {
+    "regular": {
+      "evaluated_windows": 3,
+      "mean_absolute_count_error": 0,
+      "mean_count_bias": 0,
+      "colour_errors": 0,
+      "colour_error_rate": 0.0,
+      "false_green_windows": 0,
+      "non_green_truth_windows": 0,
+      "false_green_rate": null,
+      "confusion_matrix": {
+        "green": {
+          "green": 3,
+          "yellow": 0,
+          "red": 0
+        },
+        "yellow": {
+          "green": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "red": {
+          "green": 0,
+          "yellow": 0,
+          "red": 0
+        }
+      }
+    },
+    "ai": {
+      "evaluated_windows": 3,
+      "mean_absolute_count_error": 0,
+      "mean_count_bias": 0,
+      "colour_errors": 0,
+      "colour_error_rate": 0.0,
+      "false_green_windows": 0,
+      "non_green_truth_windows": 0,
+      "false_green_rate": null,
+      "confusion_matrix": {
+        "green": {
+          "green": 3,
+          "yellow": 0,
+          "red": 0
+        },
+        "yellow": {
+          "green": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "red": {
+          "green": 0,
+          "yellow": 0,
+          "red": 0
+        }
+      }
+    },
+    "effective": {
+      "evaluated_windows": 3,
+      "mean_absolute_count_error": 0,
+      "mean_count_bias": 0,
+      "colour_errors": 0,
+      "colour_error_rate": 0.0,
+      "false_green_windows": 0,
+      "non_green_truth_windows": 0,
+      "false_green_rate": null,
+      "confusion_matrix": {
+        "green": {
+          "green": 3,
+          "yellow": 0,
+          "red": 0
+        },
+        "yellow": {
+          "green": 0,
+          "yellow": 0,
+          "red": 0
+        },
+        "red": {
+          "green": 0,
+          "yellow": 0,
+          "red": 0
+        }
+      }
+    }
+  },
+  "timing": {
+    "decode_seconds": {
+      "n": 3,
+      "median_seconds": 0.005178082999918843,
+      "p95_seconds": 0.005193572999814933
+    },
+    "detector_seconds": {
+      "n": 3,
+      "median_seconds": 0.11743033499988087,
+      "p95_seconds": 0.1694134250001298
+    },
+    "verifier_seconds": {
+      "n": 3,
+      "median_seconds": 2.1864873810000063,
+      "p95_seconds": 2.2071263739999267
+    }
+  },
+  "samples": [
+    {
+      "id": "empty-0",
+      "capacity": 100,
+      "coverage": "unknown",
+      "frame_indices": [
+        0,
+        10,
+        20
+      ],
+      "manual_counts": [
+        0,
+        0,
+        0
+      ],
+      "truth": 0,
+      "video_sha256": "99aee669f6f62f4d46dd052c936251f713bfed4c7b684f7b7a2d27999c97339e",
+      "decode_seconds": 0.004152045999944676,
+      "regular": 0,
+      "regular_frame_counts": [
+        0,
+        0,
+        0
+      ],
+      "detector_seconds": 0.1694134250001298,
+      "effective": 0,
+      "verification_status": "verified",
+      "ai": 0,
+      "ai_frame_counts": [
+        0,
+        0,
+        0
+      ],
+      "disagreement": false,
+      "verifier_seconds": 2.1864873810000063
+    },
+    {
+      "id": "empty-3",
+      "capacity": 100,
+      "coverage": "unknown",
+      "frame_indices": [
+        30,
+        40,
+        50
+      ],
+      "manual_counts": [
+        0,
+        0,
+        0
+      ],
+      "truth": 0,
+      "video_sha256": "99aee669f6f62f4d46dd052c936251f713bfed4c7b684f7b7a2d27999c97339e",
+      "decode_seconds": 0.005193572999814933,
+      "regular": 0,
+      "regular_frame_counts": [
+        0,
+        0,
+        0
+      ],
+      "detector_seconds": 0.10173488500004169,
+      "effective": 0,
+      "verification_status": "verified",
+      "ai": 0,
+      "ai_frame_counts": [
+        0,
+        0,
+        0
+      ],
+      "disagreement": false,
+      "verifier_seconds": 2.1686549729993203
+    },
+    {
+      "id": "empty-6",
+      "capacity": 100,
+      "coverage": "unknown",
+      "frame_indices": [
+        60,
+        70,
+        80
+      ],
+      "manual_counts": [
+        0,
+        0,
+        0
+      ],
+      "truth": 0,
+      "video_sha256": "99aee669f6f62f4d46dd052c936251f713bfed4c7b684f7b7a2d27999c97339e",
+      "decode_seconds": 0.005178082999918843,
+      "regular": 0,
+      "regular_frame_counts": [
+        0,
+        0,
+        0
+      ],
+      "detector_seconds": 0.11743033499988087,
+      "effective": 0,
+      "verification_status": "verified",
+      "ai": 0,
+      "ai_frame_counts": [
+        0,
+        0,
+        0
+      ],
+      "disagreement": false,
+      "verifier_seconds": 2.2071263739999267
+    }
+  ],
+  "limitations": [
+    "No accuracy pass target is defined. These results do not establish boarding suitability.",
+    "AI-only metrics exclude unavailable checks; effective metrics retain the regular estimate on failure.",
+    "False-green rate = predicted green with non-green truth / all evaluated non-green truth windows; null means no denominator.",
+    "Partial or unknown camera coverage cannot establish whole-coach occupancy.",
+    "Offline checks verify every labelled window; this is not the live 30-minute scheduler or a concurrent-load benchmark.",
+    "Small or overlapping samples are correlated; no statistical confidence or generalization claim is made."
+  ]
+}

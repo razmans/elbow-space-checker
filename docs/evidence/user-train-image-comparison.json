@@ -1,0 +1,145 @@
+{
+  "scope": "three_user_labelled_stills",
+  "capacity": 100,
+  "capacity_basis": "Unvalidated demo assumption; not a measured coach capacity",
+  "count_mae": null,
+  "count_mae_reason": "No manually annotated passenger counts were supplied",
+  "note": "Three user-labelled still images are preliminary category checks, not a representative video accuracy benchmark. Expected labels never override model predictions.",
+  "samples": [
+    {
+      "coach_id": "coach-01",
+      "user_category": "low",
+      "expected_colour": "green",
+      "original_filename": "emptyCoach.jpg",
+      "image": "low.jpg",
+      "image_sha256": "80123015f5712271a1650f29e06b026f26f60923a02a80b502aaacc91e80085f",
+      "video": "low.avi",
+      "manual_passenger_count": null,
+      "coverage": "unknown",
+      "observation": {
+        "coach_id": "coach-01",
+        "coach_name": "Coach 01 \u00b7 low image",
+        "source": "recorded_video",
+        "observed_at": "2026-10-02T09:09:56.318115+00:00",
+        "passenger_count": 12,
+        "regular_passenger_count": 0,
+        "verification": {
+          "status": "verified",
+          "model": "elbow-verifier",
+          "completed_at": "2026-10-02T09:10:39.827803+00:00",
+          "passenger_count": 12,
+          "sample_counts": [
+            12,
+            12,
+            10
+          ],
+          "disagreement": true
+        },
+        "capacity": 100,
+        "occupancy_percent": 12.0,
+        "status": "green",
+        "interval_seconds": 60,
+        "media_position_seconds": 2.0,
+        "media_window_start_seconds": 0.0,
+        "sample_counts": [
+          0,
+          0,
+          0
+        ],
+        "detector": "mobilenet-ssd-voc",
+        "playback_speed": 1,
+        "id": 1
+      },
+      "regular_colour": "green",
+      "effective_matches_user_category": true
+    },
+    {
+      "coach_id": "coach-02",
+      "user_category": "mid",
+      "expected_colour": "yellow",
+      "original_filename": "midTrain.jpeg",
+      "image": "mid.jpeg",
+      "image_sha256": "3521fd90add891ad2c23927814368c91e971688bc66bdd881754aa3fb082b0ff",
+      "video": "mid.avi",
+      "manual_passenger_count": null,
+      "coverage": "unknown",
+      "observation": {
+        "coach_id": "coach-02",
+        "coach_name": "Coach 02 \u00b7 mid image",
+        "source": "recorded_video",
+        "observed_at": "2026-10-02T09:09:56.363740+00:00",
+        "passenger_count": 12,
+        "regular_passenger_count": 6,
+        "verification": {
+          "status": "verified",
+          "model": "elbow-verifier",
+          "completed_at": "2026-10-02T09:11:37.013002+00:00",
+          "passenger_count": 12,
+          "sample_counts": [
+            12,
+            12,
+            12
+          ],
+          "disagreement": true
+        },
+        "capacity": 100,
+        "occupancy_percent": 12.0,
+        "status": "green",
+        "interval_seconds": 60,
+        "media_position_seconds": 2.0,
+        "media_window_start_seconds": 0.0,
+        "sample_counts": [
+          6,
+          6,
+          7
+        ],
+        "detector": "mobilenet-ssd-voc",
+        "playback_speed": 1,
+        "id": 3
+      },
+      "regular_colour": "green",
+      "effective_matches_user_category": false
+    },
+    {
+      "coach_id": "coach-03",
+      "user_category": "full",
+      "expected_colour": "red",
+      "original_filename": "fullTrain.jpeg",
+      "image": "full.jpeg",
+      "image_sha256": "1faacf975048f154c2e1f75b8081b56f7b0a34d1f6e831a1cd4fb27f771fed1a",
+      "video": "full.avi",
+      "manual_passenger_count": null,
+      "coverage": "unknown",
+      "observation": {
+        "coach_id": "coach-03",
+        "coach_name": "Coach 03 \u00b7 full image",
+        "source": "recorded_video",
+        "observed_at": "2026-10-02T09:09:56.362069+00:00",
+        "passenger_count": 6,
+        "regular_passenger_count": 6,
+        "verification": {
+          "status": "unavailable",
+          "model": "elbow-verifier",
+          "completed_at": "2026-10-02T09:10:54.021676+00:00",
+          "reason": "Verifier could not assess every sampled frame"
+        },
+        "capacity": 100,
+        "occupancy_percent": 6.0,
+        "status": "green",
+        "interval_seconds": 60,
+        "media_position_seconds": 2.0,
+        "media_window_start_seconds": 0.0,
+        "sample_counts": [
+          5,
+          6,
+          6
+        ],
+        "detector": "mobilenet-ssd-voc",
+        "playback_speed": 1,
+        "id": 2
+      },
+      "regular_colour": "green",
+      "effective_matches_user_category": false
+    }
+  ]
+}

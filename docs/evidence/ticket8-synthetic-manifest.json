@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "dataset_name": "Known-empty synthetic pipeline smoke",
+  "scope": "nonrepresentative_smoke",
+  "provenance": "Locally generated solid grey frames. No real people, train footage, or independent scenes.",
+  "annotator": "Synthetic fixture: count zero by construction; not human-labelled passenger footage",
+  "labelled_at": "2026-10-02T09:01:22.482980+00:00",
+  "samples": [
+    {
+      "id": "empty-0",
+      "video": "empty.avi",
+      "capacity": 100,
+      "coverage": "unknown",
+      "start_seconds": 0,
+      "window_seconds": 2,
+      "sample_count": 3,
+      "frame_indices": [
+        0,
+        10,
+        20
+      ],
+      "manual_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "empty-3",
+      "video": "empty.avi",
+      "capacity": 100,
+      "coverage": "unknown",
+      "start_seconds": 3,
+      "window_seconds": 2,
+      "sample_count": 3,
+      "frame_indices": [
+        30,
+        40,
+        50
+      ],
+      "manual_counts": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "empty-6",
+      "video": "empty.avi",
+      "capacity": 100,
+      "coverage": "unknown",
+      "start_seconds": 6,
+      "window_seconds": 2,
+      "sample_count": 3,
+      "frame_indices": [
+        60,
+        70,
+        80
+      ],
+      "manual_counts": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

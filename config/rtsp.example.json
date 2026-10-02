@@ -1,0 +1,17 @@
+{
+  "train_name": "Elbow Room Live",
+  "platform_name": "Demo platform · Platform 1",
+  "direction": "right",
+  "coaches": [
+    {
+      "coach_id": "coach-01", "coach_name": "Coach 01", "position": 1,
+      "platform_zone": "Zone A", "source": "rtsp", "rtsp_url_env": "COACH_01_RTSP_URL",
+      "capacity": 100, "interval_seconds": 60, "window_seconds": 2, "sample_count": 3,
+      "open_timeout_seconds": 5, "read_timeout_seconds": 3, "reconnect_seconds": 2,
+      "max_frame_age_seconds": 1, "reconnect_warmup_seconds": 0.5,
+      "verification": {"enabled": true, "interval_seconds": 1800, "endpoint": "http://127.0.0.1:8081/v1/chat/completions", "model": "elbow-verifier", "timeout_seconds": 120}
+    },
+    {"coach_id": "coach-02", "coach_name": "Coach 02", "position": 2, "platform_zone": "Zone B", "source": "simulation", "capacity": 120, "interval_seconds": 60, "counts": [72, 84, 60]},
+    {"coach_id": "coach-03", "coach_name": "Coach 03", "position": 3, "platform_zone": "Zone C", "source": "simulation", "capacity": 80, "interval_seconds": 60, "counts": [72, 76, 68]}
+  ]
+}

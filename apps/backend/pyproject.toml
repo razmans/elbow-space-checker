@@ -1,0 +1,7 @@
+[project]
+name = "elbow-room-backend"
+version = "0.1.0"
+description = "Local simulation and recorded-video occupancy API for Elbow Room"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = []
